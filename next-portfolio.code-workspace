@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[javascript]": {
+			"editor.maxTokenizationLineLength": 2500,
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.formatOnSave": true,
+		},
+		"emmet.includeLanguages": {
+			"ejs": "html",
+			"javascript": "javascriptreact"
+		}
+	}
+}
