@@ -1,6 +1,11 @@
+import Link from "next/link"
+
 const Index = () => {
   return (
-    <h1>こんにちは</h1>
+    <div>
+      <h1>こんにちは</h1>
+      <Link href="/contact">Contactページへ移動</Link>
+    </div>
   )
 }
 
