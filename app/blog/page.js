@@ -18,10 +18,13 @@ async function getAllBlogs() {
       slug: slug,
     };
   });
-  // blogs;
+
+  const orderedBlogs = blogs.sort((a, b) => {
+    return b.frontmatter.id - a.frontmatter.id;
+  });
 
   return {
-    blogs: blogs,
+    blogs: orderedBlogs,
   };
 }
 
