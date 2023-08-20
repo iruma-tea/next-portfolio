@@ -1,9 +1,29 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { ReactMarkdown } from "react-markdown";
 
-const SingleBlog = () => {
-  return <h1>記事ページ</h1>;
+async function getSingleBlog(context) {
+  const { slug } = context.params;
+  const data = await import(`../../../data/${slug}.md`);
+  const singleDocument = matter(data.default);
+
+  return {
+    singleDocument: singleDocument,
+  };
+}
+
+const SingleBlog = async (props) => {
+  // console.log(props);
+  const { singleDocument } = await getSingleBlog(props);
+  console.log(singleDocument);
+  return (
+    <div>
+      <h1>{singleDocument.data.title}</h1>
+      <p>{singleDocument.data.date}</p>
+      <ReactMarkdown>{singleDocument.content}</ReactMarkdown>
+    </div>
+  );
 };
 
 export default SingleBlog;
