@@ -1,3 +1,4 @@
+import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -18,11 +19,25 @@ const SingleBlog = async (props) => {
   const { singleDocument } = await getSingleBlog(props);
   console.log(singleDocument);
   return (
-    <div>
-      <h1>{singleDocument.data.title}</h1>
-      <p>{singleDocument.data.date}</p>
-      <ReactMarkdown>{singleDocument.content}</ReactMarkdown>
-    </div>
+    <>
+      <div>
+        <Image
+          src={singleDocument.data.image}
+          alt="blog-image"
+          height={500}
+          width={1000}
+          quality={90}
+          priority={true}
+        />
+      </div>
+      <div>
+        <div>
+          <h1>{singleDocument.data.title}</h1>
+          <p>{singleDocument.data.date}</p>
+          <ReactMarkdown>{singleDocument.content}</ReactMarkdown>
+        </div>
+      </div>
+    </>
   );
 };
 
