@@ -5,20 +5,20 @@ import logoImg from "../../public/images/logo.png";
 const Header = () => {
   return (
     <header>
-      <div>
+      <div className="container">
         <div>
           <Link href="/">
             <Image src={logoImg} alt="logo" />
           </Link>
+          <ul>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
       </div>
     </header>
   );

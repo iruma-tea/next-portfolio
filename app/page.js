@@ -6,15 +6,15 @@ import profilePic from "../public/images/profile.jpg";
 const Index = () => {
   return (
     <>
-      <div>
-        <div>
-          <Image src={heroPic} alt="hiro" />
+      <div className="hero">
+        <Image src={heroPic} alt="hiro" />
+        <div className="textContainer">
           <h1>I'm Abe Hiroki!</h1>
           <h3>JavaScript Developer</h3>
         </div>
       </div>
-      <div>
-        <div>
+      <div className="container">
+        <div className="profile">
           <div>
             <h2>JavaScript Nerd</h2>
             <p>
@@ -29,34 +29,34 @@ const Index = () => {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-            <div>
-              <Image src={profilePic} alt="hero" />
-            </div>
           </div>
           <div>
-            <h2>Skills</h2>
+            <Image src={profilePic} alt="hero" />
+          </div>
+        </div>
+        <div className="skills">
+          <h2>Skills</h2>
+          <div className="skillsContainer">
             <div>
-              <div>
-                <img src="/images/javascript.svg" alt="javascript" />
-                <span>JavaScript / 10 years</span>
-              </div>
-              <div>
-                <img src="/images/react.svg" alt="react" />
-                <span>React / 5 years</span>
-              </div>
-              <div>
-                <img src="/images/gatsby.svg" alt="gatsby" />
-                <span>Gatsby / 3 years</span>
-              </div>
-              <div>
-                <img src="/images/next.svg" alt="next" />
-                <span>Next.js / 3 years</span>
-              </div>
+              <img src="/images/javascript.svg" alt="javascript" />
+              <span>JavaScript / 10 years</span>
+            </div>
+            <div>
+              <img src="/images/react.svg" alt="react" />
+              <span>React / 5 years</span>
+            </div>
+            <div>
+              <img src="/images/gatsby.svg" alt="gatsby" />
+              <span>Gatsby / 3 years</span>
+            </div>
+            <div>
+              <img src="/images/next.svg" alt="next" />
+              <span>Next.js / 3 years</span>
             </div>
           </div>
-          <div>
-            <Link href="/contact">Make It Happen!</Link>
-          </div>
+        </div>
+        <div className="ctaButton">
+          <Link href="/contact">Make It Happen!</Link>
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
     <>
-      <div>
-        <div>
+      <div className="wrapper">
+        <div className="container">
           <h1>Contact</h1>
           <p>お気軽にご連絡ください</p>
           <form>
